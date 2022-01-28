@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Jessica Jeremiah 
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,12 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The purpose of this code is to help individuals identify the probability of their symptoms being
+an allergy or a cold using a questionaire.
  
 Known Issues:
-blah, blah, blah, blah
+After the corrections implented in the code, the results are derived from the answers inputted. The depth of the questionaires 
+are surface level and continued evalutions are recommended to form a concrete diagnosis. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -53,7 +55,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	var total = allergy_count + cold_count;
 		alert("allergy %" + (allergy_count/total)*100  +   "cold %" + (cold_count/total)*100);
-	}	//result percentages are not poping up
+	}	//result percentages weren't popping up so I had to simply the variable calculutations so that the percentages would pop up
 		
 	var resultText = document.getElementById("results"); //generate result 
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //creates percentage
@@ -108,16 +110,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are you eyes watery or itchy?</p>    
-        <a href="#two" onclick="allergyAdd();"class="w3-btn w3-grey w3-round">yes</a> <!-- changed the button code to match both yes and no-->
+        <a href="#two" onclick="allergyAdd();"class="w3-btn w3-grey w3-round">yes</a> <!-- added the on click= to correct the errors;
+		changed the button code to match both yes and no-->
         
-       <a href="#two" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a>
+       <a href="#two" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a> <!-- i forgot the parentheses and had to add them to 
          
     	</div>
 </div>
 
 <div class="page" id="two"> <!-- changed this from one to two.-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1> <!-- added the "question 2" label -->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -128,12 +131,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          
     	</div>
 </div>
-<div class="page" id="three">
+<div class="page" id="three">  <!-- changed this from two to three.-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1> <!-- added the "question 3" label -->
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container"> 
         <p>Do you have a soar throat?</p>    
         <a href="#four" onclick="allergyAdd();" class= "w3-btn w3-grey w3-round">yes</a> <!-- changed the button code to match both yes and no-->
         
@@ -141,9 +144,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          
     	</div>
 </div>
-<div class="page" id="four">
+<div class="page" id="four">  <!-- changed this from three to four.-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> <!-- added the "question 4" label -->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -161,7 +164,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Results</p>    
-        	<a onclick="results();" class= "w3-btn w3-grey w3-round">generate results</a> <!-- created results button-->
+        	<a onclick="results();" class= "w3-btn w3-grey w3-round">generate results</a> <!-- created results button in order to have 
+					the results page pop up -->
         
        
          
