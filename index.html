@@ -59,9 +59,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//seperated the variables to generate counts seperately
 	
 		var resultText = document.getElementById("results"); //generate result 
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //creates percentage and moved variable line
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent; 
+		
+		//creates percentage and moved variable line
 	
-	}	
+	};	
 	
 	
   </script>
@@ -165,8 +167,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Results</p>    
-        	<a onclick="results();" class= "w3-btn w3-grey w3-round">generate results</a> <!-- created results button in order to have the results page pop up -->
-      
+        	<a onclick="displayResults();" class= "w3-btn w3-grey w3-round">generate results</a> <!-- created results button in order to have the results page pop up -->
+      		
          
     	</div>
 </div>		
