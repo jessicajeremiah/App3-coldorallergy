@@ -27,6 +27,9 @@ are surface level and continued evalutions are recommended to form a concrete di
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
+	<!DOCTYPE html> 
+<html> 
+
 	
    <head> 
       <title>Hello World</title>  
@@ -38,35 +41,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//add variables and name them
+	//have them equal to 0 so that they can start
         var allergy_count = 0;
         var cold_count = 0;
 
-
+	//this function adds up the counts for the allergy responses
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		
-        }
 
+        }
+        
+	//this function adds up the counts for the allergy responses
         function coldAdd(){
             cold_count = cold_count + 1;
-        }
-	
-		function displayResults(){		
-			//insert functions for each variable
+        } 
+		//these variables display the results
+		function displayResults(){ 
 			var coldPercent = cold_count/4 * 100;
 			var allergyPercent = allergy_count/4 * 100;
-		
-			//seperated the variables to generate counts seperately
-	
-			var resultText = document.getElementById("results"); //generate result 
-			resultText.innerHTML = "Probability it is allergies = "+ allergyPercent + "%" + "<br> Probability it is a cold = "+ coldPercent + "%" + "<br>" + "<br>" your test is finished!"; 
-		
-			//creates percentage and moved variable line
-	
-	};	
-	
+			//outputs results
+			//BR means line break
+            //had to add the "%" so that it would pop up as a percentage 
+			var resultText = document.getElementById("results");
+			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = "+ coldPercent + "%" + "<br>" + "<br> Your test is complete!";
+	};
+
 	
   </script>
+<!-- tells you what the design of the code will be -->
 
 
 
@@ -110,83 +113,74 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
-	
+	<!-- DIV creates a division within the pages -->
     	<div id="content" class="w3-container">
-        <p>Are you eyes watery or itchy?</p>    
-        <a href="#two" onclick="allergyAdd();"class="w3-btn w3-grey w3-round">yes</a> <!-- added the on click= to correct the errors;
-		changed the button code to match both yes and no-->
-        
-       <a href="#two" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a> <!-- i forgot the parentheses and had to add them to -->
-         
+       		<p> Are your eyes watery or itchy? </p> 
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> yes </a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> no </a>
+		<!-- had to create the yes or no button -->
+		<!-- onclick means when someone clicks it an event/action will occur-->
+		<!--class="w3-btn w3-grey w3-round" is used for the shape and design of the buttons-->
     	</div>
+	
 </div>
-
-<div class="page" id="two">  <!-- changed this from one to two.-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1> <!-- added the "question 2" label -->
+<!-- start of code --> 
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+		<!-- added the Header and changed the text -->
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Do you have a fever?</p>    
-        <a href="#three" onclick="allergyAdd();" class= "w3-btn w3-grey w3-round">yes</a> <!-- changed the button code to match both yes and no-->
-        
-       <a href="#three" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a>
-         
-    	</div>
-</div>
-<div class="page" id="three">  <!-- changed this from two to three.-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1> <!-- added the "question 3" label -->
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> yes </a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> no </a>
+	<!-- had to correct the page IDs so that they synced-->
 	</div>
-	
-    	<div id="content" class="w3-container"> 
-        <p>Do you have a soar throat?</p>    
-        <a href="#four" onclick="allergyAdd();" class= "w3-btn w3-grey w3-round">yes</a> <!-- changed the button code to match both yes and no-->
-        
-       <a href="#four" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a>
-         
-    	</div>
-</div>
-<div class="page" id="four">  <!-- changed this from three to four.-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1> <!-- added the "question 4" label -->
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>    
-        <a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round">yes</a> <!-- changed the button code to match both yes and no-->
-        
-       <a href="#five" onclick="coldAdd();"class="w3-btn w3-grey w3-round">no</a>
-         
-    	</div>
 </div>	
-<div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+	<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
 	</div>
-    	<div id="content" class="w3-container">
-        	<p>Time to see results!</p>    
-			<a href="#six";"class="w3-btn w3-grey w3round"> Click to see</a>
-							     
-		</div>
-		
-<div class="page" id="six">
-		<div class="w3-container w3-flat-carrot">
-				<h1>Results</h1>			
-		</div>
-		
-		<div id="content" class="w3-container">
-		<p> id=Results for the test </p>				      
-		<a onclick="displayResults();" class="w3-btn w3-grey w3-round"> Show results </a> 
-		
-		<!-- created results button in order to have the results page pop up -->
-      		
-		<p id="results"></p>							      
-         
-    	</div>
-</div>		
-
 	
+	<div id="content" class="w3-container">
+		<p> Do you have a sore throat?</p>
+	<a href="#four" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> yes </a>
+	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> no </a>
+	<!--  continued to add the buttons -->	
+	</div>
+</div>	
+	<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p> Are your symptoms seasonal or chronic? </p>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> yes </a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> no </a>
+	</div>
+</div>	
+	
+	<!-- Added "onclick" for all of the questions to pop up on results page -->
+	
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+					
+		<div id="content" class="w3-container">
+		<p> Results for the test </p>
+		<a onclick="displayResults();" class="w3-btn w3-grey w3-round"> Show Results </a>
+                <!-- displays precentages-->
+       		<p id="results"></p>
+   	</div>
+		       
+   </div>
+		
+<!-- a footer is a small section that displays side notes or extra information -->
+
+<!-- Are you experiencing a dry or wet cough? -->
+<!-- Are you experiencing body aches? -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
