@@ -51,13 +51,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function results(){		//insert functions for each variable
+	function displayResults(){		
+		//insert functions for each variable
+		var coldPercent = cold_count/4 * 100;
+		var allergyPercent = allergy_count/4 *100;
+		
+		//seperated the variables to generate counts seperately
 	
-	var total = allergy_count + cold_count;
-		alert("allergy %" + (allergy_count/total)*100  +   "cold %" + (cold_count/total)*100);
-	
-	var resultText = document.getElementById("results"); //generate result 
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //creates percentagw and moved variable line
+		var resultText = document.getElementById("results"); //generate result 
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //creates percentage and moved variable line
 	
 	}	
 	
